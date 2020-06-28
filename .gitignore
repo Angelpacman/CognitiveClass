@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+
+"01 Python for data science"/.ipynb_checkpoints/*.ipynb
+
+*.pdf
+*gen.pdf
