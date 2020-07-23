@@ -4,3 +4,4 @@ El procedimiento imediato al [[Read data]] es el pre procesado de datos conciste
 - Normalización de los datos([[Data normalization]])
 - [[Data Binning]]
 - Convertir valores categóricos en variables numéricas ([[Dummy variables]])
+- [[Read data#Review introduction| Leer datos]]
