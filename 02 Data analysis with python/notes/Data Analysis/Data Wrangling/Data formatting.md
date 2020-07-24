@@ -5,8 +5,8 @@ Luego de que nos aseguramos de tratar a los datos faltantes, hay que verificar s
 - `.info()`: Proporciona informacion sobre todo el dataframe, conteo de variables, faltantes y tipo de objeto.
 
 ---
-#### Estandarización de los datos
-La estandarizacion es el proceso de transformar datos en formao común y concistente, por ejemplo:
+### Estandarización de los datos
+La estandarizacion es el proceso de transformar datos en formato común y consistente, por ejemplo:
 
 Trabajar con 1 sólo nombre para referirnos a una variable
 

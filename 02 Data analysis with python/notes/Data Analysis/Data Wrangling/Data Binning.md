@@ -25,4 +25,6 @@ df['price_bined'] = pd.cut(	df['price'],
 							bins, 
 							labels = group_names, 
 							include_lowest = True	)
+#bins son los puntos sobre el _eje x_ que limitan las barras
+#labels son los nombres que tienen esos intervalos en la grafica
 ```

@@ -3,7 +3,7 @@ Leer un data frame requiere de utilizar la libreria de pandas para ello:
 ```py
 import pandas as pd
 ```
-para abir un csv se usa el metodo de pandas `pd.read_csv()`, por defecto se usa la primera fila del dataset como header, si no queremos tener ningun encabezado usamos la opción: `headers = None`
+para abir un csv se usa el metodo de pandas `pd.read_csv()`, por defecto se usa la primera fila del dataset como header, si no queremos tener ningun encabezado usamos la opción: `headers=None`
 
 metodos útiles para la exploracion rapida:
 

@@ -8,5 +8,5 @@ De forma general quitar faltantes podria verse así:
 df.dropna(subset = ["nombre de la columna"], axis = 0, inplace = True)
 ```
 
-La opcion `inplace = True` sirve para asignar los cambios al df original, es recomendable no ponerlo hasta asegurarnos de que queremos el cambio de manera definitiva
+La opción `inplace = True` sirve para asignar los cambios al df original, es recomendable no ponerlo hasta asegurarnos de que queremos el cambio de manera definitiva
 
