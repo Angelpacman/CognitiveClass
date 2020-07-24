@@ -1,6 +1,6 @@
 En esta sección cubriremos los conceptos básicos de la agrupación y cómo esto puede ayudar a transformar nuestro conjunto de datos.
 
-Suponga que quiere saber: ¿Existe alguna relación entre los diferentes tipos de **sistema de accionamiento**? (adelante, atrás y tracción a las cuatro ruedas) y el **`price`** de los vehículos?
+Suponga que quiere saber: ¿Existe alguna relación entre los diferentes tipos de **sistema de accionamiento**? (adelante, atrás y tracción a las cuatro ruedas) y el `price` de los vehículos?
 
 Si es así, ¿qué tipo de "sistema de conducción" agrega más valor a un vehículo?
 Sería bueno si pudiéramos agrupar todos los datos por los diferentes tipos de `drive-wheels`, y compare los resultados de estas diferentes `drive-wheels` entre sí.
@@ -10,7 +10,7 @@ En pandas esto se puede hacer usando el grupo por método **GroupBy**.
 - Agrupa los datos en subconjuntos según a las diferentes categorías de esa variable.
 - Puede agrupar por una sola variable o puede agrupar por múltiples variables pasando múltiples nombres de variables.
 
-Como ejemplo, digamos que estamos interesados en encontrar el `price` promedio de vehículos y observe cómo difieren las variables entre los diferentes tipos de "`body-style`" y "`drive-wheels`"
+Como ejemplo, digamos que estamos interesados en encontrar el `price` promedio de vehículos y observe cómo difieren las variables entre los diferentes tipos de `body-style` y `drive-wheels`
 
 Para hacer esto, primero seleccionamos las tres columnas de datos que nos interesan, lo que se haceen la primera línea de código.
 ```py
