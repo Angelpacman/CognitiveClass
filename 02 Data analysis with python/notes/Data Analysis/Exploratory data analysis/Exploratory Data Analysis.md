@@ -1,5 +1,5 @@
 ## Exploratory Data Analysis
-La exploración de datos viene justo despues del [[Pre-processing|Data wrangling]]
+La exploración de datos viene justo despues del ==Data wrangling== 
 En este módulo cubriremos los conceptos básicos del análisis de datos exploratorios utilizando **Python**.
 
 El análisis exploratorio de datos, o en resumen "EDA", es un enfoque para analizar datos con el fin de:
@@ -13,9 +13,8 @@ __"¿Cuáles son las características que tienen el mayor impacto en el `price` 
 Revisaremos un par de diferentes técnicas de análisis de datos exploratorios útiles para responder esta pregunta.
 
 En este módulo aprenderá sobre:
-- [[Estadística descriptiva]], que describe las funciones básicas características de un conjunto de datos y obtiene un breve resumen sobre la muestra y las medidas de datos.
-
-- Básico de Agrupar datos usando [[GroupBy]], y cómo esto puede ayudar a transformar nuestro conjunto de datos.
-- [[ANOVA]], el Análisis de varianza, un método estadístico en el que la variación en un conjunto de observaciones, las observaciones se dividen en distintos componentes.
-- La [[Correlación]] entre diferentes variables.
-- Y por último, [[Correlación avanzada]], donde le presentaremos varios métodos estadísticos de correlación a saber, correlación de ==Pearson== y mapas de calor de correlación.
+- [[1 Estadística descriptiva]], que describe las funciones básicas características de un conjunto de datos y obtiene un breve resumen sobre la muestra y las medidas de datos.
+- Básico de Agrupar datos usando [[2 GroupBy]], y cómo esto puede ayudar a transformar nuestro conjunto de datos.
+- [[3 ANOVA]], el Análisis de varianza, un método estadístico en el que la variación en un conjunto de observaciones, las observaciones se dividen en distintos componentes.
+- La [[4 Correlación]] entre diferentes variables.
+- Y por último, [[5 Correlación avanzada]], donde le presentaremos varios métodos estadísticos de correlación a saber, correlación de ==Pearson== y mapas de calor de correlación.

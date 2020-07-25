@@ -71,4 +71,4 @@ Ahora, ¿cómo se relaciona el tamaño variable del motor con el `price`? Desde 
 Esto nos está dando una indicación inicial de que existe una relación lineal positiva entre estas dos variables.
 
 ---
-Ahora que hemos obtenido un panorama general de nustros datos con la estadistica descriptiva, toca tratar los datos con [[GroupBy | Agrupaciones por columnas]]
+Ahora que hemos obtenido un panorama general de nustros datos con la estadistica descriptiva, toca tratar los datos con [[2 GroupBy| Agrupaciones por columnas]]

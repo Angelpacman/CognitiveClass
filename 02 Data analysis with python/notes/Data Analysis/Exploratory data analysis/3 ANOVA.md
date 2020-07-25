@@ -14,7 +14,6 @@ Según el conjunto de datos del automóvil, podemos usar ANOVA para ver si hay a
 La prueba ANOVA devuelve dos valores: la puntuación de la __prueba F__ y el __valor p.__
 
 - La prueba F calcula la relación de variación entre la media del grupo sobre la variación dentro de cada uno de los grupos de muestra.
-
 - El valor p muestra si el resultado obtenido es estadísticamente significativo.
 
 

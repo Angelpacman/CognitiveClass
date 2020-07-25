@@ -119,4 +119,4 @@ plt.show()
 ![[heatmap labeled.png]]
 
 ---
-Ahora que tenemos un panorama de los datos a partir de un par de variables predictoras y una variable objetivo toca tratar los datos con el [[ANOVA|Análisis de la varianza]]
+Ahora que tenemos un panorama de los datos a partir de un par de variables predictoras y una variable objetivo toca tratar los datos con el [[3 ANOVA|Análisis de la varianza]]
