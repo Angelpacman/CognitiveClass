@@ -28,3 +28,5 @@ Además de obtener más datos, puede probar diferentes tipos de modelos. En este
 - Regresión lineal simple
 - Regresión lineal múltiple 
 - Regresión polinómica
+
+[[1 Regresión lineal y multiple]]

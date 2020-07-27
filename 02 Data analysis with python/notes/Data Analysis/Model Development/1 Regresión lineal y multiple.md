@@ -6,7 +6,7 @@ La regresión lineal simple (o SLR) es: Un método para ayudarnos a comprender l
 
 Nos gustaría llegar a una relación lineal entre las variables que se muestran aquí:
 
-$y = b_{0} + b_{1} * x$
+$$y = b_{0} + b_{1} * x$$
 - El parámetro $b_{0}$ es la intersección
 - El parámetro $b_{1}$ es la pendiente. 
 
@@ -32,7 +32,7 @@ Podemos resumir el proceso así:
 - Tenemos un conjunto de puntos de entrenamiento 
 - Usamos estos puntos de entrenamiento para encajar o entrenar el modelo y obtener parámetros: luego usamos estos parámetros en el modelo
 - Ahora tenemos un modelo; usamos el sombrero en la $y$ para denotar que el modelo es una estimación:
-	$\hat{y} = b_{0} + b_{1} * x$
+	$$\hat{y} = b_{0} + b_{1} * x$$
 - Podemos usar este modelo para predecir valores que no hemos visto.
 
 Por ejemplo, no tenemos un automóvil con 20 millas de autopista por galón, podemos usar nuestro modelo para hacer una predicción para el precio de este automóvil. Pero no olvide que nuestro modelo no siempre es correcto.
@@ -81,7 +81,7 @@ La regresión lineal múltiple se utiliza para explicar la relación entre
 - Dos o más variables predictoras (X).
 
 Si tenemos por ejemplo 4 variables predictoras, 
-$\hat{y} = b_0+b_1*x_1+b_2*x_2+b_3*x_3+b_4*x_4$
+$$\hat{y} = b_0+b_1*x_1+b_2*x_2+b_3*x_3+b_4*x_4$$
 
 entonces:
 - $b_0$: intercepción (X = 0) 
@@ -89,7 +89,7 @@ entonces:
 - $b_2$: el coeficiente del parámetro 𝑋2: y así sucesivamente
 
 Si solo hay dos variables, podemos visualizar los valores. Considere la siguiente función.
-$\hat{y} = 1 + 2*x_1 + 3*x_2$
+$$\hat{y} = 1 + 2*x_1 + 3*x_2$$
 
 Las variables 𝑋1 y 𝑋2 se pueden visualizar en un plano 2D; hagamos un ejemplo. 
 La tabla contiene diferentes valores de variables predictoras 𝑋1 y 𝑋2. La posición de cada punto se coloca en el plano 2D, color codificado en consecuencia. Cada valor de las variables predictoras 𝑋1 y 𝑋2 se asignará a un nuevo valor 𝑌 ($\hat{y}$ predecida)
@@ -128,3 +128,6 @@ La salida es una matriz con el mismo número de elementos que el número de mues
 1. La intersección es un atributo del objeto `lm.intercept_`. Y los coeficientes también son atributos `lm.coef_`.
 1. Es útil visualizar la ecuación, reemplazando los nombres de las variables dependientes con nombres reales.
 Esto es idéntico al formulario que discutimos anteriormente.
+
+
+[[2 Evaluación de modelo por Vusialización]]
