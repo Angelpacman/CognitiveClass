@@ -1,4 +1,5 @@
-Hablaremos sobre la correlación entre diferentes variables. La correlación es una métrica estadística para medir hasta qué punto las diferentes variables son interdependientes. En otras palabras, cuando miramos dos variables a lo largo del tiempo, si una variable cambia, ¿cómo afecta esto al cambio en la otra variable?
+# Correlación
+Hablaremos sobre la correlación entre diferentes variables. ==La correlación es una métrica estadística para medir hasta qué punto las diferentes variables son interdependientes==. En otras palabras, cuando miramos dos variables a lo largo del tiempo, si una variable cambia, ¿cómo afecta esto al cambio en la otra variable?
 
 Por ejemplo, se sabe que fumar está relacionado con el cáncer de pulmón.
 Dado que tiene una mayor probabilidad de contraer cáncer de pulmón si fuma.
@@ -10,7 +11,7 @@ Por lo tanto, podemos decir que los paraguas y la lluvia son interdependientes y
 De hecho, podemos decir que el paraguas y la lluvia están correlacionados, pero no tendríamos suficiente información para decir si el paraguas causó la lluvia o la lluvia causó el paraguas.
 En ciencia de datos, generalmente tratamos más con la correlación.
 
-### Relación lineal positiva
+## Relación lineal positiva
 Veamos la correlación entre el `engine-size` y `price`.
 
 ```py
@@ -28,7 +29,7 @@ Con el aumento en los valores del `engine-size`, los valores del `price` tambié
 Podemos usar `seaborn.regplot()` para crear el diagrama de dispersión.
 
 ### Relación lineal negativa
-Como otro ejemplo, ahora veamos la relación entre millas de carretera por galón `highway-mpg` para ver su impacto en el `price` del automóvil.
+Como otro ejemplo, ahora veamos la relación entre millas de carretera por galón `highway-mpg` para ver su impacto en `price` del automóvil.
 ```py
 sns.regplot(x="highway-mpg", y="price", data=df)
 plt.ylim(0,)
@@ -36,12 +37,11 @@ plt.ylim(0,)
 
 ![[scatter-highway-mpg-price.png]]
 
-Como podemos ver en este diagrama, cuando el valor de millas por galón en carretera sube, el `price` del valor baja. Por lo tanto, hay una relación lineal negativa entre millas de carretera por galón `highway-mpg` y `price`.
-Aunque esta relación es negativa, la pendiente de la línea es empinada
-lo que significa que las millas de autopista por galón siguen siendo un buen indicador del `price`.
+Como podemos ver en este diagrama, cuando el valor de millas por galón en carretera sube, el valor de `price` baja. Por lo tanto, hay una relación lineal negativa entre millas de carretera por galón `highway-mpg` y `price`.
+Aunque esta relación es negativa, la pendiente de la línea es empinada, lo que significa que `highway-mpg` sigue siendo un buen indicador del `price`.
 Se dice que estas dos variables tienen una correlación negativa.
 
-### Relación lineal debil
+## Relación lineal debil
 ```py
 sns.regplot(x="peak-rpm", y="price", data=df)
 plt.ylim(0,)

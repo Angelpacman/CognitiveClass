@@ -1,3 +1,4 @@
+# Estadística descriptiva
 Cuando comience a analizar datos, es importante explorar primero sus datos antes de gastar tiempo construyendo modelos complicados. Una manera fácil de hacerlo es calcular algunos estadísticas descriptivas para sus datos.
 
 El análisis estadístico descriptivo ayuda a describir las características básicas de un conjunto de datos y obtiene un breve resumen sobre la muestra y las medidas
@@ -20,8 +21,8 @@ Es más fácil de leer:
 drive_wheels_counts = df['drive-wheels'].value_counts().to_frame()
 
 #renombrar la columna y el index
-drive_wheels_counts.rename(	columns={'drive-wheels': 'value_counts'},
-							inplace=True)
+drive_wheels_counts.rename(	columns={'drive-wheels':'value_counts'},
+							inplace=True )
 drive_wheels_counts.index.name = 'drive-wheels'
 ```
 
@@ -36,29 +37,28 @@ Vemos que tenemos 118 autos en el __fwd__ (frente categoría de tracción en las
 
 Los diagramas de caja son una excelente manera de visualizar numéricos datos, ya que puede visualizar las diversas distribuciones de los datos.
 
-Las características principales que muestra el diagrama de caja son la **mediana** de los datos, que representa dónde está el punto medio de datos. El cuartil superior muestra dónde está el percentil 75 es decir, el cuartil inferior muestra dónde está el percentil 25. Los datos entre el Superior y el cuartil inferior representa el __rango intercuartil__.
+Las características principales que muestra el diagrama de caja son la #mediana de los datos, que representa dónde está el punto medio de datos. El cuartil superior muestra dónde está el percentil 75 es decir, el cuartil inferior muestra dónde está el percentil 25. Los datos entre el Superior y el cuartil inferior representa el __rango intercuartil__.
 
 A continuación, tienes los extremos inferior y superior. Estos se calculan como 1.5 veces el rango intercuartil por encima del percentil 75, y como 1,5 veces el IQR por debajo del percentil 25.
 
 Finalmente, los gráficos de caja también muestran valores atípicos como puntos individuales que ocurren fuera de la parte superior
 y extremos inferiores. Con las gráficas de caja, puede detectar fácilmente valores atípicos y también ver la distribución y el sesgo de los datos.
 
-Los diagramas de caja facilitan la comparación entre grupos. En este ejemplo, usando Boxplot podemos ver la distribución de diferentes categorías de la característica de “ruedas motrices” sobre la característica "`price`".
+Los diagramas de caja facilitan la comparación entre grupos. En este ejemplo, usando Boxplot podemos ver la distribución de diferentes categorías de la característica de `drive-wheels` sobre la característica `price`.
 ```py
 sns.boxplot(x = "drive-wheels", y = "price", data=df)
 ```
 
 Podemos ver que la distribución del `price` entre el rwd (tracción trasera) y las otras categorías son distintas, pero el `price` para fwd (tracción delantera) y 4wd (tracción a las cuatro ruedas) son casi indistinguibles.
 
-Muchas veces tendemos a ver variables continuas en nuestros datos. Estos puntos de datos son números contenidos en algún rango. Por ejemplo, en nuestro conjunto de datos, `price` y motor el tamaño son variables continuas. ¿Qué pasa si queremos entender la relación entre "`engine-size`" y "`price`"? ¿Podría el `engine-size` predecir el `price` de un auto?
+Muchas veces tendemos a ver variables continuas en nuestros datos. Estos puntos de datos son números contenidos en algún rango. Por ejemplo, en nuestro conjunto de datos, `price` y motor el tamaño son variables continuas. ¿Qué pasa si queremos entender la relación entre `engine-size` y `price`? ¿Podría el `engine-size` predecir el `price` de un auto?
 
 Una buena forma de visualizar esto es usar un gráfico de dispersión. Cada observación en un diagrama de dispersión está representada como un punto. Este gráfico muestra la relación entre dos variables:
 
 - La ==variable predictora==: es la variable que está utilizando para predecir un resultado. En este caso, nuestra variable predictora es el `engine-size`.
 
-- La ==variable objetivo==: es la variable que está intentando predecir. En este caso, nuestro
+- La ==variable objetivo==: es la variable que está intentando predecir. En este caso, nuestra variable objetivo es `price`, ya que este sería el resultado.
 
-La variable objetivo es el `price`, ya que este sería el resultado.
 En un diagrama de dispersión, generalmente establecemos la variable predictiva en el eje x o el eje horizontal y establecemos la variable objetivo en el eje y o eje vertical.
 
 En este caso, trazaremos el `engine-size` en el __eje x__ y el `price` en el __eje y__.

@@ -1,3 +1,4 @@
+# Agrupación por caracteristicas
 En esta sección cubriremos los conceptos básicos de la agrupación y cómo esto puede ayudar a transformar nuestro conjunto de datos.
 
 Suponga que quiere saber: ¿Existe alguna relación entre los diferentes tipos de **sistema de accionamiento**? (adelante, atrás y tracción a las cuatro ruedas) y el `price` de los vehículos?
@@ -6,7 +7,7 @@ Si es así, ¿qué tipo de "sistema de conducción" agrega más valor a un vehí
 Sería bueno si pudiéramos agrupar todos los datos por los diferentes tipos de `drive-wheels`, y compare los resultados de estas diferentes `drive-wheels` entre sí.
 
 En pandas esto se puede hacer usando el grupo por método **GroupBy**.
-- El grupo por método se utiliza en variables categóricas
+- El grupo por característica se utiliza en variables categóricas
 - Agrupa los datos en subconjuntos según a las diferentes categorías de esa variable.
 - Puede agrupar por una sola variable o puede agrupar por múltiples variables pasando múltiples nombres de variables.
 
@@ -16,7 +17,7 @@ Para hacer esto, primero seleccionamos las tres columnas de datos que nos intere
 ```py
 df_gptest = df[['drive-wheels','body-style','price']]
 ```
-Luego agrupamos los datos reducidos de acuerdo con "`drive-wheels`" y "`body-style`" en la segunda línea.
+Luego agrupamos los datos reducidos de acuerdo con `drive-wheels` y `body-style` en la segunda línea.
 ```py
 grouped_test1 = df_gptest.groupby([	'drive-wheels',
 									'body-style'],
@@ -50,11 +51,11 @@ Podemos ver que, de acuerdo con nuestros datos, los convertibles de tracción tr
 
 Una tabla de este formulario no es la más fácil de leer y tampoco es muy fácil de visualizar.
 
-### Pivot
+## Pivot
 
 Para que sea más fácil de entender, podemos transformar esta tabla en una tabla dinámica mediante el uso del método tabla dinámica `.pivot()`.
 
-En la tabla anterior, las "`drive-wheels`" y el "`body-style`" se enumeraron en columnas. Una tabla dinámica tiene una variable mostrada a lo largo de las columnas y la otra variable mostrada a lo largo de las filas.
+En la tabla anterior, las `drive-wheels` y el `body-style` se enumeraron en columnas. Una tabla dinámica tiene una variable mostrada a lo largo de las columnas y la otra variable mostrada a lo largo de las filas.
 
 ```py
 grouped_pivot = grouped_test1.pivot(index='drive-wheels',columns='body-style')
@@ -71,7 +72,7 @@ Solo con una línea de código y usando el método de `.pivot()` de pandas, pode
 
 Los datos de `price`s ahora se convierten en una cuadrícula rectangular, que es más fácil de visualizar. Esto es similar a lo que generalmente se hace en las hojas de cálculo de Excel.
 
-### Heat map
+## Heat map
 
 Otra forma de representar la tabla dinámica es usar un diagrama de mapa de calor ==Heat map==. El mapa de calor toma una cuadrícula de datos rectangular y asigna una intensidad de color basada en el valor de datos en los puntos de la cuadrícula.
 
@@ -85,10 +86,9 @@ plt.colorbar()
 plt.show()
 ```
 ![[heatmap.png]]
-En la gráfica de salida, cada tipo de "`body-style`" está numerado a lo largo del **eje xy** cada tipo de "`drive-wheels`" está numerado a lo largo del **eje y**.
+En la gráfica de salida, cada tipo de `body-style` está numerado a lo largo del **eje x** y cada tipo de `drive-wheels` está numerado a lo largo del **eje y**.
 
-Los `price`'s promedio se trazan con diferentes colores en función de sus valores, de acuerdo con la barra de colores. Vemos que la sección superior del mapa de calor parece tener `price`'s más altos que la parte inferior
-sección.
+Los `price`'s promedio se trazan con diferentes colores en función de sus valores, de acuerdo con la barra de colores. Vemos que la sección superior del mapa de calor parece tener `price`'s más altos que la parte inferior sección.
 
 El mapa de calor traza la variable objetivo (`price`) proporcional al color con respecto a las variables '`drive-wheels`' y '`body-style`' en los ejes vertical y horizontal, respectivamente. Esto nos permite visualizar cómo se relaciona el `price` con '`drive-wheels`' y '`body-style`'.
 
@@ -98,7 +98,7 @@ fig, ax = plt.subplots()
 im = ax.pcolor(grouped_pivot, cmap='RdBu')
 
 #label names
-row_labels = grouped_pivot.columns.levels[1]
+row_labels = grouped_pivot.columns.levels[1] #levels no es necesario si no son datos de una tabla pivotada, es decir el "label" esta bien definido
 col_labels = grouped_pivot.index
 
 #move ticks and labels to the center
