@@ -77,10 +77,12 @@ Los datos de `price`s ahora se convierten en una cuadrícula rectangular, que es
 Otra forma de representar la tabla dinámica es usar un diagrama de mapa de calor ==Heat map==. El mapa de calor toma una cuadrícula de datos rectangular y asigna una intensidad de color basada en el valor de datos en los puntos de la cuadrícula.
 
 Es una excelente manera de trazar la **variable objetivo** sobre múltiples variables y, a través de esto, obtener pistas visuales de la relación entre estas variables y el objetivo.
+##### Example
+En este ejemplo, utilizamos el método pcolor de `pyplot` para trazar un mapa de calor y convertir el tabla dinámica anterior en una forma gráfica.
 
-En este ejemplo, utilizamos el método pcolor de pyplot para trazar un mapa de calor y convertir el tabla dinámica anterior en una forma gráfica.
-Especificamos el esquema de color rojo-azul.
+==Especificamos el esquema de color rojo-azul==(aunque se puede usar color 'jet')
 ```py
+#figura
 plt.pcolor(grouped_pivot, cmap='RdBu')
 plt.colorbar()
 plt.show()
