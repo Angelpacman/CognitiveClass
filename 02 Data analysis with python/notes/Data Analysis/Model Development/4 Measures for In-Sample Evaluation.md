@@ -7,7 +7,7 @@ Dos medidas importantes que usamos a menudo para determinar el ajuste de un mode
 - R cuadrado.
 
 ## Mean squared error
-Para medir el MSE, encontramos la diferencia entre el valor real $y$ y el valor predicho $\hat{y}$ luego elevar al cuadrado el resultado.
+Para medir el #MSE, encontramos la diferencia entre el valor real $y$ y el valor predicho $\hat{y}$ luego elevar al cuadrado el resultado.
 En este caso, el valor real es 150; el valor predicho es 50. Restando estos puntos obtenemos 100.
 Luego cuadramos el número.
 ==Luego tomamos la media o el promedio de todos los errores sumando todos juntos y dividiendo por la cantidad de muestras==.
