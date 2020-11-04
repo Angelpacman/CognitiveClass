@@ -27,7 +27,7 @@ En Python, hacemos esto usando la función `.polyfit()` que pertenece a numpy.
 En este ejemplo, desarrollamos una base de modelo de regresión polinómica de tercer orden.
 ```py
 f = np.polyfit(x,y, 3)
-p = np.polyfit(f)
+p = np.poly1d(f)
 # podemos imprimir el modelo
 print(p)
 #-1.557 x³ + 204.8 x² - 8965 x + 1.379e+05
@@ -58,7 +58,7 @@ Por ejemplo, podemos estandarizar cada característica simultáneamente.
 - Importamos `StandardScaler` 
 - Entrenamos el objeto
 - Ajustamos el objeto de escala;
-- Luego transforme los datos en un nuevo marco de datos en la matriz "_x_scale_".
+- Luego transforme los datos en un nuevo data frame en la matriz "_x_scale_".
 ```py
 from sklearn.preprocessing import StandardScaler
 SCALE = StandardScaler()
@@ -73,6 +73,7 @@ Hay muchos pasos para obtener una predicción, por ejemplo:
 - Normalización, 
 - Transformación polinómica,
 - Regresión lineal.
+
 Simplificamos el proceso usando una tubería.
 Las tuberías realizan secuencialmente una serie de transformaciones.
 El último paso lleva a cabo una predicción.
@@ -88,9 +89,9 @@ from sklearn.pipeline import Pipeline
 ```
 Creamos una lista de tuplas, el primer elemento de la tupla contiene el nombre del estimador: modelo.
 ```py
-Input=[('scale',StandardScaler()), 
+Input=[ ('scale', StandardScaler()), 
 		('polynomial', PolynomialFeatures(include_bias=False)), 
-		('model',LinearRegression())]
+		('model',LinearRegression()) ]
 ```
 El segundo elemento contiene el constructor del modelo.
 Ingresamos la lista en el constructor de tuberías.
@@ -98,7 +99,7 @@ Ingresamos la lista en el constructor de tuberías.
 pipe = Pipeline(Input)
 ```
 Ahora tenemos un objeto de pipeline.
-Podemos entrenar la tubería aplicando el método de tren al objeto Pipeline.
+Podemos entrenar la tubería aplicando el método de entrenamiento al objeto Pipeline.
 ```py
 Pipe.train(X['horsepower', 
 			'curb-weight', 

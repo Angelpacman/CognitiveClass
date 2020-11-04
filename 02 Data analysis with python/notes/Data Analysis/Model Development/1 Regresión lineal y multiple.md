@@ -2,7 +2,7 @@
 - La regresión lineal se referirá a una variable independiente para hacer una predicción.
 - La regresión lineal múltiple se referirá a múltiples variables independientes para hacer una predicción.
 
-La regresión lineal simple (o SLR) es: Un método para ayudarnos a comprender la relación entre dos variables: la ==variable predictora==(independiente) $x$, y la ==variable objetivo== (dependiente) $y$.
+La regresión lineal simple (o SLR) es: Un método para ayudarnos a comprender la relación entre dos variables: la ==variable predictora== (independiente) $x$, y la ==variable objetivo== (dependiente) $y$.
 
 Nos gustaría llegar a una relación lineal entre las variables que se muestran aquí:
 
@@ -11,7 +11,7 @@ $$y = b_{0} + b_{1} * x$$
 - El parámetro $b_{1}$ es la pendiente. 
 
 Cuando ajustamos o entrenamos el modelo, llegaremos arriba con estos parámetros. Este paso requiere muchas matemáticas, por lo que no nos centraremos en esto parte. Aclaremos el paso de predicción. 
-Es difícil calcular cuánto cuesta un automóvil, pero las millas de autopista por galón se encuentran en el manual del propietario. Si asumimos, hay un relación lineal entre estas variables, podemos usar esta relación para formular un modelo para determinar el precio del automóvil. Si las millas de autopista por galón son 20, nosotros podemos ingresar su valor en el modelo para obtener una predicción de $22,003.
+Es difícil calcular cuánto cuesta un automóvil, pero las millas de autopista por galón se encuentran en el manual del propietario. Si asumimos, que hay una relación lineal entre estas variables, podemos usar esta relación para formular un modelo para determinar el precio del automóvil. Si las millas de autopista por galón son 20, nosotros podemos ingresar su valor en el modelo para obtener una predicción de $22,003.
 
 $y = 38423 - 821x$
 $y = 38423 - 821(20)$
@@ -63,6 +63,7 @@ lm.fit(X,Y)
 Yhat = lm.predict(X)
 ```
 La salida es una matriz, la matriz tiene el mismo número de muestras que la entrada X.
+
 Yhat | X
 -----|----
 2 	| 5
@@ -112,6 +113,7 @@ Yhat = lm.predict(X)
 ```
 En este caso, la entrada es una matriz o marco de datos con 4 columnas, 
 El número de filas corresponde al número de muestras.
+
 $x_1$ | $x_2$ | $x_3$ | $x_4$
 ----|----|-----------|----
 3 | 5 |-4| 3
@@ -119,6 +121,7 @@ $x_1$ | $x_2$ | $x_3$ | $x_4$
 2|4 |2|-4
 
 La salida es una matriz con el mismo número de elementos que el número de muestras.
+
 |Yhat|
 |----|
 |2|

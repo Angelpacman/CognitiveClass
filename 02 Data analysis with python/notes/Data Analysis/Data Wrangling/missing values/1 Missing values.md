@@ -3,7 +3,7 @@
  
  Ejemplos de *missing values*: `N/A, 0, espacios en blanco " "`
 
-Cada forma de lidiar con estos valores es diferente, y depender+a de factores como el propósito del análisis, la relacion de faltantes y el numero total de obserbaciones, el tipo de objeto al que debería pertenecer. Cada situación se juzga de diferente marera.
+Cada forma de lidiar con estos valores es diferente, y dependerá de factores como el propósito del análisis, la relacion de faltantes y el numero total de observaciones, el tipo de objeto al que debería pertenecer. Cada situación se juzga de diferente marera.
 
 ---
 ## Opciones a considerar:

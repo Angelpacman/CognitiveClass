@@ -1,6 +1,6 @@
 Normalizar los datos es el proceso de transformar los valores de varias variables en rangos similares.
 
-La justificación de este proceso viene del hacho de que si se usan 2 variables en una regresion lineal pero una de las variables tiene rangos de valores significativamente mayores que la otra variable, entonces va a infuir intrinsecamente en mas en el resutado que la variable con rangos menores.
+La justificación de este proceso viene del hecho de que si se usan 2 variables en una regresion lineal pero una de las variables tiene rangos de valores significativamente mayores que la otra variable, entonces va a infuir intrinsecamente mas en el resutado que la variable con rangos menores.
 
 ##### Métodos de normalización de datos
 Modelo | Fórmula | Descripción 

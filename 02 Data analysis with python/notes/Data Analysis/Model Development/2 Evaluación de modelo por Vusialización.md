@@ -1,3 +1,4 @@
+# Evaluación del modelo por visualización
 Las gráficas de regresión son una buena estimación de:
 - La relación entre dos variables,
 - La fuerza de la correlación, y
