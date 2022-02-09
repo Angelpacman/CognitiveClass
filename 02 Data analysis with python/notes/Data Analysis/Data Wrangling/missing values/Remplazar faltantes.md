@@ -1,4 +1,4 @@
-
+#### Remplazar faltantes
 Una vaz que ya identificamos de que tipo son los abjetos que queremos remplazar (numerico ó categórico) utlizamos el metodo `.replace()` en python usando como argumento los valores que se van a cambiar:
 
 ```py

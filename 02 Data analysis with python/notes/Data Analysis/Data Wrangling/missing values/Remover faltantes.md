@@ -1,3 +1,4 @@
+#### Remover faltantes
 El método de python para quitar los datos faltantes  es `.dropna()`, por defecto tomará el df completo si no se especifica un `subset = ["nombre de la columna"]`, además se debe especificar la opción axis:
 
 - `axis = 0` quita la ==fila== completa

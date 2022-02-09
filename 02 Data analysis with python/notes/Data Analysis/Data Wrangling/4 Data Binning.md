@@ -14,7 +14,8 @@ plt.hist(df["variable"])
 Para hacerlo desde cero se necesita de `.linspace()`:
 
 ```py
-#hacer divisiones equidistantes, como necesitamos 3 categorias entonces hacemos 4 diviciones:
+# hacer divisiones equidistantes, 
+# como necesitamos 3 categorias entonces hacemos 4 divisiones:
 bins = np.linspace(min(df['price']), max(df['price']), 4)
 
 #listar los nombres de los grupos:

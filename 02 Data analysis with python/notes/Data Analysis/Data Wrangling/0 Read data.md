@@ -22,7 +22,7 @@ df.dropna(subset=["price"], axis = 0)
 
 Se puede sobreescribir el dataframe usado o bien asignarle un nuevo nombre al df con el método `df.to_csv()`
 
-Por defecto este método recibe como argumento el nombre del archvo que se ha de escribir, además de la opción `index = False`
+Por defecto este método recibe como argumento el nombre del archivo que se ha de escribir, además de la opción `index = False`
 
 ```py
 df.to_csv("automobile.csv", index = False)
@@ -41,11 +41,13 @@ sql | `pd.read_sql()` | `df.to_sql()`
 ---
 ## Descripción de los datos
 - `df.dtypes`: Describe los tipos de objetos en el df.
-- `df.info` and `df.info()`: ambos métodos dan un conteo de los elementos en las columnas asi como señalar su tipo de objeto.
-- `df.describe`: Hace un resumen estadistico de todas las columnas ([[Feature]]) en el dataframe excluyendo por defecto los valores faltantes ^[Tambien conocidos como "missing values", estos valores faltantes suelen pasarse a formato de pandas como NaN (Not a Number) con la funcion `np.nan()` ], si se queren considerar todos los datos se agrega el argumento `include = "all"` aunque esto resulta que las operaciones matemáticas que tengan que ver con un `NaN` resultan en `NaN`.
+- `df.info` y `df.info()`: ambos métodos dan un conteo de los elementos en las columnas asi como señalar su tipo de objeto.
+- `df.describe`: Hace un resumen estadistico de todas las columnas ([[Feature]]) en el dataframe excluyendo por defecto los valores faltantes ^[Tambien conocidos como "_missing values_", estos valores faltantes suelen pasarse a formato de pandas como __NaN__ (Not a Number) con la funcion `np.nan()` ], si se quieren considerar todos los datos se agrega el argumento `include = "all"` aunque esto resulta que las operaciones matemáticas que tengan que ver con un `NaN` resultan en `NaN`.
 
 La desccripción de solo algunas columnas se puede hacer seleccionando el label del df y aplicando al final el método `.describe()`, ejemplo:
 ```py
 df[["columna 1", "columna 3"]].describe()
 ```
 
+
+>__Nota__ El dataset fue tomado de este lugar: https://archive.ics.uci.edu/ml/datasets/Automobile?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkDA0101ENSkillsNetwork20235326-2021-01-01

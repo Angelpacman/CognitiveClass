@@ -27,7 +27,11 @@ grouped_test1 = df_gptest.groupby([	'drive-wheels',
 
 Como estamos interesados en saber cómo difiere el `price` promedio en todos los ámbitos, puede tomar la media de cada grupo y agregar este bit al final de la línea 2.
 
-	grouped_test1
+```py
+grouped_test1
+```
+
+output:
 
  -| drive-wheels |	body-style | price
  --|--------------|-------------|---

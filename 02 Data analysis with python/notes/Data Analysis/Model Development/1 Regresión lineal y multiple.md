@@ -2,7 +2,7 @@
 - La regresión lineal se referirá a una variable independiente para hacer una predicción.
 - La regresión lineal múltiple se referirá a múltiples variables independientes para hacer una predicción.
 
-La regresión lineal simple (o SLR) es: Un método para ayudarnos a comprender la relación entre dos variables: la ==variable predictora== (independiente) $x$, y la ==variable objetivo== (dependiente) $y$.
+La regresión lineal simple (o __SLR__) es: Un método para ayudarnos a comprender la relación entre dos variables: la ==variable predictora== (independiente) $x$, y la ==variable objetivo== (dependiente) $y$.
 
 Nos gustaría llegar a una relación lineal entre las variables que se muestran aquí:
 
@@ -54,11 +54,11 @@ lm = LinearRegression()
 X = df[['highway-mpg']]
 Y = df['price']
 ```
-4. Luego use el método fit para ajustar el modelo y encontrar los parámetros $b_{0}$ y $b_{1}$. La entrada son las características y los objetivos.
+4. Luego use el método ``fit`` para ajustar el modelo y encontrar los parámetros $b_{0}$ y $b_{1}$. La entrada son las características y los objetivos.
 ```py
 lm.fit(X,Y)
 ```
-5. Podemos obtener una predicción usando el método predic.
+5. Podemos obtener una predicción usando el método ``predic``.
 ```py
 Yhat = lm.predict(X)
 ```
@@ -133,4 +133,4 @@ La salida es una matriz con el mismo número de elementos que el número de mues
 Esto es idéntico al formulario que discutimos anteriormente.
 
 
-[[2 Evaluación de modelo por Vusialización]]
+[[2 Evaluación de modelo por Visualización]]

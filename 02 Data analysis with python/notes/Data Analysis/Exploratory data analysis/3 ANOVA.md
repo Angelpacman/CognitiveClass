@@ -1,6 +1,6 @@
 # Análisis de la varianza
 En esta sección, estudiaremos el Análisis de #varianza. Supongamos que queremos analizar una variable categórica y ver la correlación entre diferentes categorías.
-Por ejemplo, considere el conjunto de datos del automóvil, la pregunta que podemos hacer es, __¿cómo diferentes categorías de la característica__ `make` __(como variable categórica) tiene impacto en__  `price`__?__
+Por ejemplo, considere el conjunto de datos del automóvil, la pregunta que podemos hacer es, ___¿cómo diferentes categorías de la característica___ `make` ___(como variable categórica) tiene impacto en___  `price`___?___
 
 ![[AVG_price.png]]
 
