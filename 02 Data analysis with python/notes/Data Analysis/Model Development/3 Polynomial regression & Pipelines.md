@@ -5,19 +5,35 @@ Transformamos nuestros datos en un polinomio, luego usamos regresión lineal par
 Luego discutiremos las tuberías.
 Las tuberías son una forma de simplificar su código.
 ## Regresión polinómica
-==La regresión polinómica es un caso especial de la regresión lineal general.==
-Este método es beneficioso para ==describir las relaciones curvilíneas.==
-¿Qué es una relación curvilínea?
+- ==La regresión polinómica es un caso especial de la regresión lineal general.==
+- Este método es beneficioso para ==describir las relaciones curvilíneas.==
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Polyreg_scheffe.svg/325px-Polyreg_scheffe.svg.png)
+## ¿Qué es una relación curvilínea?
 Es lo que obtienes al cuadrar o establecer términos de orden superior de las variables predictoras en el modelo, transformando los datos.
 El modelo puede ser cuadrático, lo que significa que la variable predictora en el modelo es cuadrada.
 
+$\hat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2$
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeIdCVbxTL21iGM-tc9lkjxZrgd_l0mWnIeg&usqp=CAU)
+
 Usamos un paréntesis para indicar que es un exponente.
 Esta es una regresión polinómica de segundo orden con una figura que representa la función.
+
 El modelo puede ser cúbico, lo que significa que la variable predictora está en cubos.
+
+$\hat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2+b_{3}(x_1)^3$
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxpyeBJJXLbzuSgWJ-ZDm2bjjpk-WzzDmHw&usqp=CAU)
+
 Esta es una regresión polinómica de tercer orden.
 Al examinar la figura, vemos que la función tiene más variación.
+
 También existen regresiones polinómicas de orden superior, cuando un buen ajuste no ha sido logrado por segundo o tercer orden.
+
 Podemos ver en las figuras cuánto cambian las gráficas cuando cambiamos el orden del polinomio regresión.
+
+$\hat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2+b_{3}(x_1)^3+...$
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPcYoR7dnnnDHlSiOnoODI1oT3Pq_hY6hylw&usqp=CAU)
 
 ==El grado de la regresión hace una gran diferencia y puede resultar en un mejor ajuste si elige el valor correcto.==
 En todos los casos, la relación entre la variable y el parámetro siempre es lineal.
@@ -39,7 +55,7 @@ También podemos tener regresión lineal polinómica multidimensional.
 La expresión puede complicarse; Estos son solo algunos de los términos para un polinomio bidimensional de segundo orden.
 
 La función `.polyfit()` de Numpy no puede realizar este tipo de regresión.
-Usamos la biblioteca `preprocessing` en sci-kit-learn, para crear un objeto polinomial.
+Usamos la biblioteca `preprocessing` en _scikit-learn_, para crear un objeto polinomial.
 ```py
 from sklearn.preprocessing import PolynomialFeatures
 pr = PolynomialFeatures(degreee = 2, include_bias = False)
@@ -47,6 +63,8 @@ x_polly = pr.fit_transform(x[['horsepower', 'curb-weight']])
 ```
 El constructor toma el grado del polinomio como parámetro.
 Luego transformamos las entidades en una entidad polinómica con el método `fit_transform`.
+
+## Polinomial Regression with more than One Dimension
 Hagamos un ejemplo más intuitivo.
 Considere las características que se muestran aquí.
 Aplicando el método, transformamos los datos. Ahora tenemos un nuevo conjunto de características que son
@@ -58,7 +76,7 @@ Por ejemplo, podemos estandarizar cada característica simultáneamente.
 - Importamos `StandardScaler` 
 - Entrenamos el objeto
 - Ajustamos el objeto de escala;
-- Luego transforme los datos en un nuevo data frame en la matriz "_x_scale_".
+- Luego transforme los datos en un nuevo data frame en la matriz `x_scale`.
 ```py
 from sklearn.preprocessing import StandardScaler
 SCALE = StandardScaler()
@@ -96,7 +114,7 @@ Input=[ ('scale', StandardScaler()),
 El segundo elemento contiene el constructor del modelo.
 Ingresamos la lista en el constructor de tuberías.
 ```py
-pipe = Pipeline(Input)
+Pipe = Pipeline(Input)
 ```
 Ahora tenemos un objeto de pipeline.
 Podemos entrenar la tubería aplicando el método de entrenamiento al objeto Pipeline.

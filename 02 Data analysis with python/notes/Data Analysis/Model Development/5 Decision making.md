@@ -7,7 +7,7 @@ Veamos un ejemplo de predicción; si recuerdas, entrenamos el modelo usando el m
 ```py
 im.fit(df['highway-mpg'], df['prices'])
 ```
-Ahora queremos saber cuál sería el precio de un automóvil que tiene un `highway-mpg` de 30. Al conectar este valor al método `predict()`, nos da un precio resultante de 3,771.30.
+Ahora queremos saber cuál sería el precio de un automóvil que tiene un `highway-mpg` de _30_. Al conectar este valor al método `predict()`, nos da un precio resultante de _3,771.30_.
 ```py
 lm.predict(30)
 ```
@@ -36,7 +36,7 @@ El parámetro final es el tamaño del paso entre los elementos de la secuencia, 
 Podemos usar la salida para predecir nuevos valores; la salida es una matriz de numpy.
 Muchos de los valores son negativos.
 
-### Visialization
+### Visualization
 Usar un gráfico de regresión para visualizar sus datos es el primer método que debe probar.
 Consulte los laboratorios para ver ejemplos de cómo trazar una regresión polinómica.
 Para este ejemplo, el efecto de la variable independiente es evidente en este caso.
